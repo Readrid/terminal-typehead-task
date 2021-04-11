@@ -9,9 +9,8 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static void main(String[] args) {
-        try {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             String input;
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             input = reader.readLine();
             while (!input.equals("exit")) {
                 Parser parser = new Parser(input);
